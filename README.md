@@ -18,7 +18,7 @@ This simple cli application takes a text file contain a list of match results as
 ## Roadmap / Tasks
 - [X] Create a state machine
 - [X] Set up a unit testing environment.
-- [ ] Unit test the state machine to validate our state transitions
+- [X] Unit test the state machine to validate our state transitions
 - [ ] Write unit tests for operations/computation within each state/stage in our system
 - [ ] Program solutions that pass when for Unit tests
 - [ ] Review - refactor and update README. The submit the assessment.

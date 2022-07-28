@@ -1,0 +1,27 @@
+{
+  "name": "span-be",
+  "version": "1.0.0",
+  "description": "Production ready, maintainable, testable command-line application that will calculate the ranking table for a league.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asmbatha/league-ranking.git"
+  },
+  "keywords": [
+    "nodejs",
+    "cli",
+    "state",
+    "machine",
+    "span",
+    "digital"
+  ],
+  "author": "Ayanda Mbatha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asmbatha/league-ranking/issues"
+  },
+  "homepage": "https://github.com/asmbatha/league-ranking#readme"
+}

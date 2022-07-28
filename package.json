@@ -1,27 +1,39 @@
 {
-  "name": "span-be",
-  "version": "1.0.0",
-  "description": "Production ready, maintainable, testable command-line application that will calculate the ranking table for a league.",
-  "main": "index.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/asmbatha/league-ranking.git"
-  },
-  "keywords": [
-    "nodejs",
-    "cli",
-    "state",
-    "machine",
-    "span",
-    "digital"
-  ],
-  "author": "Ayanda Mbatha",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/asmbatha/league-ranking/issues"
-  },
-  "homepage": "https://github.com/asmbatha/league-ranking#readme"
+    "name": "span-be",
+    "version": "1.0.0",
+    "description": "Production ready, maintainable, testable command-line application that will calculate the ranking table for a league.",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "tdd": "npm test -- --watchAll"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/asmbatha/league-ranking.git"
+    },
+    "keywords": [
+        "nodejs",
+        "cli",
+        "state",
+        "machine",
+        "span",
+        "digital"
+    ],
+    "author": "Ayanda Mbatha",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/asmbatha/league-ranking/issues"
+    },
+    "homepage": "https://github.com/asmbatha/league-ranking#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.18.9",
+        "babel-jest": "^28.1.3",
+        "jest": "^28.1.3"
+    },
+    "type": "module",
+    "jest": {
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        }
+    }
 }

@@ -17,7 +17,7 @@ This simple cli application takes a text file contain a list of match results as
 
 ## Roadmap / Tasks
 - [X] Create a state machine
-- [ ] Set up a unit testing environment.
+- [X] Set up a unit testing environment.
 - [ ] Unit test the state machine to validate our state transitions
 - [ ] Write unit tests for operations/computation within each state/stage in our system
 - [ ] Program solutions that pass when for Unit tests
@@ -35,6 +35,12 @@ node . [file path]
 ```
 
 ## Testing
+Run Tests once:
 ```
 npm test
+```
+
+Rerun tests after file changes:
+```
+npm run tdd
 ```

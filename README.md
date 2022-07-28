@@ -16,7 +16,7 @@ This simple cli application takes a text file contain a list of match results as
 - Unit test also promotes writing minimal, maintainable and testable code and cuts out all of the unnecessary.
 
 ## Roadmap / Tasks
-- [ ] Create a state machine
+- [X] Create a state machine
 - [ ] Set up a unit testing environment.
 - [ ] Unit test the state machine to validate our state transitions
 - [ ] Write unit tests for operations/computation within each state/stage in our system

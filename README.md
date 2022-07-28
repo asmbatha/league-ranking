@@ -21,16 +21,21 @@ This simple cli application takes a text file contain a list of match results as
 - [X] Unit test the state machine to validate our state transitions
 - [X] Write unit tests for operations/computation within each state/stage in our system
 - [X] Program solutions that pass when for Unit tests
-- [ ] Review - refactor and update README. The submit the assessment.
+- [X] Review - refactor and update README. Then submit the assessment.
+
+## Post thoughts and considerations
+- Javascript uses a Insertion sort algorithm in their `sort` function. This has a time complexity of Big O(n^2). This is perfectly fine for this use case as a leage would probably not consist of a very large number of participants and match ups.
+- Other minor optimizations are also possible at the risk of over engineering a rather simple peace of code.
 
 ## Installation
+Clone this repository locally.
 Ensure you have nodejs installed then simply run:
 ```
 npm i
 ```
 
 ## Usage
-To use the a file included in this repo, you can simply run:
+To use the [input file](input.txt) included in this repo, you can simply run:
 ```
 npm start
 ```
@@ -40,7 +45,6 @@ To use a different file as input you can run the following.
 node index.js [file path]
 ```
 
-example:
 ## Testing
 Run Tests once:
 ```

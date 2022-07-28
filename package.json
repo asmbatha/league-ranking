@@ -4,6 +4,7 @@
     "description": "Production ready, maintainable, testable command-line application that will calculate the ranking table for a league.",
     "main": "index.js",
     "scripts": {
+        "start": "node index.js input.txt",
         "test": "jest",
         "tdd": "npm test -- --watchAll"
     },
@@ -34,6 +35,9 @@
     "jest": {
         "transform": {
             "^.+\\.jsx?$": "babel-jest"
-        }
+        },
+        "setupFiles": [
+            "./setup"
+        ]
     }
 }

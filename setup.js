@@ -1,0 +1,1 @@
+process.argv = ['node', 'entry', 'input.txt'];

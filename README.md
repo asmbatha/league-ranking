@@ -19,8 +19,8 @@ This simple cli application takes a text file contain a list of match results as
 - [X] Create a state machine
 - [X] Set up a unit testing environment.
 - [X] Unit test the state machine to validate our state transitions
-- [ ] Write unit tests for operations/computation within each state/stage in our system
-- [ ] Program solutions that pass when for Unit tests
+- [X] Write unit tests for operations/computation within each state/stage in our system
+- [X] Program solutions that pass when for Unit tests
 - [ ] Review - refactor and update README. The submit the assessment.
 
 ## Installation
@@ -30,10 +30,17 @@ npm i
 ```
 
 ## Usage
+To use the a file included in this repo, you can simply run:
 ```
-node . [file path]
+npm start
 ```
 
+To use a different file as input you can run the following. 
+```
+node index.js [file path]
+```
+
+example:
 ## Testing
 Run Tests once:
 ```

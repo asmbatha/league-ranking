@@ -1,6 +1,6 @@
 # League Ranking
 
-![System design](system-diagram.png)
+![State machine](state-machine.png)
 
 Node.js CLI application.  
 This simple cli application calculates and outputs a league ranking table from a texet file with match results.
@@ -84,10 +84,3 @@ or
 ```sh
 $ npm tdd
 ```
-
-## System design
-
-![State machine](state-machine.png)
-
-- A state machine as described in the diagram above will controll the logical flow of the application and define clear scopes for our unit tests.
-

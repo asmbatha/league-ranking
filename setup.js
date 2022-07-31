@@ -1,1 +1,1 @@
-process.argv = ['node', 'entry', 'input.txt'];
+process.argv = ['node', 'entry', 'test/input.txt'];

@@ -2,13 +2,30 @@ import fs from 'fs'
 
 export default async (stateMachine) => {
     try {
-        const filePath = process.argv[2];
-        const gameResults = fs.readFileSync(filePath, 'utf8').toString().split('\n')
+        const files = Array.from(new Set(process.argv.slice(2)))
+        stateMachine.context.gameResults = []
 
-        stateMachine.context.gameResults = gameResults
+        if (files.length) {
+            const data = [].concat(...files.map(readData))
+            stateMachine.context.gameResults = data
+        } else {
+            const data = readData(0)
+            stateMachine.context.gameResults = data
+        }
+
+        function readData(source) {
+            return fs.readFileSync(source, 'utf8')
+                .toString()
+                .split('\n')
+                .filter(data => !!data)
+        }
+
+        if (!stateMachine.context.gameResults.length)
+            throw new Error(`No match results provided`)
+
         stateMachine.action('next')
     } catch (error) {
         stateMachine.context.error = error
-        stateMachine.error
+        stateMachine.action('error')
     }
 }

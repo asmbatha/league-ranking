@@ -1,4 +1,5 @@
 export default async (stateMachine) => {
-    console.error(stateMachine.context.error.message)
+    process.stderr.write(stateMachine.context.error.message + '\n')
     stateMachine.action('next')
+    process.exit(1);
 }

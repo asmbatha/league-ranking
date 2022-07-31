@@ -42,5 +42,9 @@
         "setupFiles": [
             "./setup"
         ]
-    }
+    },
+    "files": [
+        "bin",
+        "!src/**/*.test.js"
+    ]
 }

@@ -11,5 +11,4 @@ export default async (stateMachine) => {
 
         console.log(`${rank}. ${name}, ${points} pt${points == 1 ? '' : 's'}`)
     });
-    stateMachine.action('next')
 }

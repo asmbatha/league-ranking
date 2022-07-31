@@ -3,16 +3,22 @@ import { StateMachine } from '../stateMachine.js'
 
 const stateMachine = new StateMachine()
 
-test('Should correctly add up points', async () => {
-    stateMachine.state = 'calculate-points'
-    stateMachine.context.teamPoints = {
-        'Test team': 4,
-        'Man U': 0,
-        'Barca': 1,
-        'Banyana Banyana': 3
-    }
+describe('sort-teams state handler', () => {
+    test('Should correctly sort the teams by points in descending order', async () => {
+        stateMachine.state = 'sort-teams'
+        stateMachine.context.teamPoints = {
+            'Test team': 4,
+            'Man U': 0,
+            'Barca': 1,
+            'Banyana Banyana': 3
+        }
 
-    await handler(stateMachine)
+        await handler(stateMachine)
 
-    expect(stateMachine.context.league[0].points).toBeGreaterThan(stateMachine.context.league[3].points)
+        expect(stateMachine.context.league[0].points).toBeGreaterThan(stateMachine.context.league[3].points)
+    })
+
+    test('Next state should be `output`', async () => {
+        expect(stateMachine.state.name).toBe('output')
+    })
 })

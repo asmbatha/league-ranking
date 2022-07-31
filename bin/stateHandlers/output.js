@@ -9,6 +9,7 @@ export default async (stateMachine) => {
         }
         const { rank, name, points } = team
 
-        console.log(`${rank}. ${name}, ${points} pt${points == 1 ? '' : 's'}`)
+        process.stdout.write(`${rank}. ${name}, ${points} pt${points == 1 ? '' : 's'}\n`)
     });
+    process.exit(0);
 }

@@ -6,10 +6,11 @@ const stateMachine = new StateMachine()
 test('Should log the error and terminate the machine', async () => {
     stateMachine.state = 'show-error'
     stateMachine.context.error = new Error('test error')
-    jest.spyOn(console, 'error').mockImplementation()
+    jest.spyOn(process, 'exit').mockImplementation()
+    jest.spyOn(process.stderr, 'write').mockImplementation()
 
     await handler(stateMachine)
 
-    expect(console.error).toHaveBeenLastCalledWith('test error')
+    expect(process.exit).toHaveBeenLastCalledWith(1)
     expect(stateMachine.state.name).toBe(undefined)
 })

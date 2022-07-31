@@ -5,7 +5,8 @@ const stateMachine = new StateMachine()
 
 describe('sort-teams state handler', () => {
     test('Should correctly rank teams with equal points', async () => {
-        jest.spyOn(console, 'log').mockImplementation()
+        jest.spyOn(process.stdout, 'write').mockImplementation()
+        jest.spyOn(process, 'exit').mockImplementation()
         stateMachine.state = 'output'
         stateMachine.context.league = [
             { name: 'Tarantulas', points: 6 },

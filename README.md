@@ -39,7 +39,15 @@ $ npm install -g
 ```
 **Execute**
 ```sh
-$ league-ranking FILENAME
+$ league-ranking [FILENAME ...]
+```
+Also accepts input as STDIN
+```sh
+$ curl -s "https://yourdonamin.api/input.txt" | league-ranking
+```
+or
+```sh
+$ "./input.txt" | league-ranking
 ```
 
 **Uninstall**
@@ -60,11 +68,11 @@ $ npm start
 
 **Run with custom input**  
 ```sh
-$ node . FILENAME
+$ node . [FILENAME ...]
 ```
 or
 ```
-$ bin/cli.js FILENAME
+$ bin/cli.js [FILENAME ...]
 ```
 
 

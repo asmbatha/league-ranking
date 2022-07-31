@@ -1,5 +1,7 @@
-import calculatePoints from './calculate-points.js'
-import { stateMachine } from '../stateMachine.js'
+import handler from './calculate-points.js'
+import { StateMachine } from '../stateMachine.js'
+
+const stateMachine = new StateMachine()
 
 test('Should correctly add up points', async () => {
     stateMachine.state = 'calculate-points'
@@ -9,7 +11,7 @@ test('Should correctly add up points', async () => {
         'Test team 0, Banyana Banyana 3'
     ]
 
-    await calculatePoints(stateMachine)
+    await handler(stateMachine)
 
     expect(stateMachine.context.teamPoints['Test team']).toBe(4)
 })

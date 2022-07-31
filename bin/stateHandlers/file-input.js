@@ -6,7 +6,7 @@ export default async (stateMachine) => {
         const gameResults = fs.readFileSync(filePath, 'utf8').toString().split('\n')
 
         stateMachine.context.gameResults = gameResults
-        stateMachine.next
+        stateMachine.action('next')
     } catch (error) {
         stateMachine.context.error = error
         stateMachine.error

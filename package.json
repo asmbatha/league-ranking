@@ -1,10 +1,13 @@
 {
-    "name": "span-be",
+    "name": "league-ranking",
     "version": "1.0.0",
     "description": "Production ready, maintainable, testable command-line application that will calculate the ranking table for a league.",
-    "main": "index.js",
+    "main": "./bin/cli.js",
+    "bin": {
+        "league-ranking": "./bin/cli.js"
+    },
     "scripts": {
-        "start": "node index.js input.txt",
+        "start": "node ./bin/cli.js input.txt",
         "test": "jest",
         "tdd": "npm test -- --watchAll"
     },

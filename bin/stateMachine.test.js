@@ -1,6 +1,11 @@
-import { stateMachine } from './stateMachine.js'
+import { StateMachine } from './stateMachine.js'
 
 describe('Ensure our statemachine is configured correctly', () => {
+    const stateMachine = new StateMachine()
+    beforeEach(() => {
+        stateMachine.state = 'file-input'
+    })
+
     test('initial state should be `file-input`', () => {
         expect(stateMachine.state.name).toBe('file-input')
     })
@@ -15,7 +20,7 @@ describe('Ensure our statemachine is configured correctly', () => {
         })
 
         test('next state should be `calculate-points`', () => {
-            expect(stateMachine.next.name).toBe('calculate-points')
+            expect(stateMachine.action('next').name).toBe('calculate-points')
         })
     })
 
@@ -29,7 +34,7 @@ describe('Ensure our statemachine is configured correctly', () => {
         })
 
         test('next state should be `sort-teams`', () => {
-            expect(stateMachine.next.name).toBe('sort-teams')
+            expect(stateMachine.action('next').name).toBe('sort-teams')
         })
     })
 
@@ -43,7 +48,7 @@ describe('Ensure our statemachine is configured correctly', () => {
         })
 
         test('next state should be `output`', () => {
-            expect(stateMachine.next.name).toBe('output')
+            expect(stateMachine.action('next').name).toBe('output')
         })
     })
 
@@ -57,7 +62,7 @@ describe('Ensure our statemachine is configured correctly', () => {
         })
 
         test('next state should be `calculate-points`', () => {
-            expect(stateMachine.next.name).toBe(undefined)
+            expect(stateMachine.action('next').name).toBe(undefined)
         })
     })
 })

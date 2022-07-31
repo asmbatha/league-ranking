@@ -38,5 +38,5 @@ export default async (stateMachine) => {
 
     stateMachine.context.teamPoints = teams
 
-    stateMachine.next
+    stateMachine.action('next')
 }

@@ -6,5 +6,5 @@ export default async (stateMachine) => {
         })).sort((a, b) => b.points - a.points)
 
     stateMachine.context.league = league
-    stateMachine.next
+    stateMachine.action('next')
 }

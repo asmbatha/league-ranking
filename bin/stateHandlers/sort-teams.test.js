@@ -1,5 +1,7 @@
-import sortTeams from './sort-teams.js'
-import { stateMachine } from '../stateMachine.js'
+import handler from './sort-teams.js'
+import { StateMachine } from '../stateMachine.js'
+
+const stateMachine = new StateMachine()
 
 test('Should correctly add up points', async () => {
     stateMachine.state = 'calculate-points'
@@ -10,7 +12,7 @@ test('Should correctly add up points', async () => {
         'Banyana Banyana': 3
     }
 
-    await sortTeams(stateMachine)
+    await handler(stateMachine)
 
     expect(stateMachine.context.league[0].points).toBeGreaterThan(stateMachine.context.league[3].points)
 })

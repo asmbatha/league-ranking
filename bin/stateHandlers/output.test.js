@@ -1,5 +1,7 @@
-import output from './output.js'
-import { stateMachine } from '../stateMachine.js'
+import handler from './output.js'
+import { StateMachine } from '../stateMachine.js'
+
+const stateMachine = new StateMachine()
 
 test('Should correctly rank teams with equal points', async () => {
     jest.spyOn(console, 'log').mockImplementation()
@@ -12,7 +14,7 @@ test('Should correctly rank teams with equal points', async () => {
         { name: 'Grouches', points: 0 }
     ]
 
-    await output(stateMachine)
+    await handler(stateMachine)
 
     expect(stateMachine.context.league[2].rank).toEqual(stateMachine.context.league[3].rank)
 })

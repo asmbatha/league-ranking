@@ -12,5 +12,4 @@ test('Should log the error and terminate the machine', async () => {
     await handler(stateMachine)
 
     expect(process.exit).toHaveBeenLastCalledWith(1)
-    expect(stateMachine.state.name).toBe(undefined)
 })
